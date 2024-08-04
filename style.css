@@ -1,0 +1,13 @@
+.form {
+  visibility: hidden;
+}
+.formToggle{
+  visibility: visible;
+}
+
+/* .btn_del {
+  visibility: hidden;
+}
+.btn_del--visible{
+  visibility: visible;
+} */

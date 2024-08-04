@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="btn">ADD NEW</button>
+  <button id="btn1">DELETE</button>
+  <!-- <button id="btn1" onclick="delToggle()">DELETE</button> -->
+  <!-- <div id="display_form"></div> -->
+
+  <dialog id="dialog">
+    <form id="form" method="dialog">
+      <input type="text" id="title" placeholder="title">
+      <input type="text" id="author" placeholder="author">
+      <input type="text" id="pages" placeholder="pages">
+      <select name="" id="read">
+        <option value="Choose">Choose an option</option>
+        <option value="True">true</option>
+        <option value="False">false</option>
+      </select>
+      <button id="btn" onclick="addBookToLibrary()">submit</button>
+    </form>
+  </dialog>
+
+  <dialog id="dialog1">
+    <form id="form1" method="dialog">
+      <input type="text" id="id" placeholder="id">
+      <button class="btn_del" id="btn_del" onclick="deleteItem()">delete</button>
+    </form>
+  </dialog>
+
+  <!-- <form action="" class="form">
+    <input type="text" id="title" placeholder="title">
+    <input type="text" id="author" placeholder="author">
+    <input type="text" id="pages" placeholder="pages">
+    <select name="" id="read">
+      <option value="True">true</option>
+      <option value="False">false</option>
+    </select>
+    <button id="btn" onclick="addBookToLibrary()">submit</button>
+    <button class="btn_del" id="btn_del" onclick="deleteItem()">delete</button>
+    <input type="text" id="id" placeholder="id">
+  </form> -->
+
+  <table id="library"></table>
+
+  <output></output>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
