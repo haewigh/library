@@ -8,8 +8,6 @@ if (Array.isArray(savedBooks)){
   myLibrary = [];
 }
 
-// const display = document.getElementById('display_form');
-
 function Book(title,author,pages,read,id){
   this.title = title;
   this.author = author;
@@ -34,15 +32,7 @@ function addBookToLibrary(){
   createTable(myLibrary);
 }
 
-function createlog(){
-  
-}
-
-// function delToggle(){
-//   document.getElementById('btn_del').classList.replace('btn_del', 'btn_del--visible');
-// }
-
-function deleteItem(){
+function deleteItem1(){
   document.getElementById('library').innerHTML='';
   let bookTitle = document.getElementById("title").value;
   let bookId = document.getElementById('id').value;
@@ -59,6 +49,19 @@ function deleteItem(){
   createTable(myLibrary);
 }
 
+function deleteItem(e){
+  document.getElementById('library').innerHTML='';
+    const deleteId = e.target.id;
+    myLibrary= myLibrary.filter(book2delete=>{
+      if (book2delete.id == deleteId){
+        return false;
+      }else{
+        return true;
+      }
+    })
+    saveList()
+    createTable(myLibrary);
+}
 
 function saveList(){
   localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
@@ -83,20 +86,7 @@ function createTable(myLibrary){
     const delElement = document.createElement("button");
     delElement.textContent= "Delete";
     delElement.setAttribute("id", element.id);
-
-    delElement.addEventListener("click", (e)=>{
-      document.getElementById('library').innerHTML='';
-      const deleteId = e.target.id;
-      myLibrary= myLibrary.filter(book2delete=>{
-        if (book2delete.id == deleteId){
-          return false;
-        }else{
-          return true;
-        }
-      })
-      saveList()
-      createTable(myLibrary);
-    })
+    delElement.onclick = deleteItem;
     
     const bookRow = table.insertRow();
     const col1 = bookRow.insertCell();

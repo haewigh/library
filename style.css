@@ -1,13 +1,20 @@
-.form {
-  visibility: hidden;
-}
-.formToggle{
-  visibility: visible;
+*, *::before, *::after{
+  box-sizing: border-box;
 }
 
-/* .btn_del {
-  visibility: hidden;
+.buttons{
+  margin: 2em;
+  
 }
-.btn_del--visible{
-  visibility: visible;
-} */
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 0.5em;
+  text-align: center;
+  
+}

@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button id="btn">ADD NEW</button>
-  <button id="btn1">DELETE</button>
-  <!-- <button id="btn1" onclick="delToggle()">DELETE</button> -->
-  <!-- <div id="display_form"></div> -->
+  <div class="buttons">
+    <button id="btn">ADD NEW</button>
+    <button id="btn1">DELETE</button>
+  </div>
 
   <dialog id="dialog">
     <form id="form" method="dialog">
@@ -33,23 +33,9 @@
     </form>
   </dialog>
 
-  <!-- <form action="" class="form">
-    <input type="text" id="title" placeholder="title">
-    <input type="text" id="author" placeholder="author">
-    <input type="text" id="pages" placeholder="pages">
-    <select name="" id="read">
-      <option value="True">true</option>
-      <option value="False">false</option>
-    </select>
-    <button id="btn" onclick="addBookToLibrary()">submit</button>
-    <button class="btn_del" id="btn_del" onclick="deleteItem()">delete</button>
-    <input type="text" id="id" placeholder="id">
-  </form> -->
-
   <table id="library"></table>
 
   <output></output>
-
 
   <script src="index.js"></script>
 </body>
